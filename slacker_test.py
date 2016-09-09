@@ -1,6 +1,9 @@
 from slacker import Slacker
 
-token = 'xoxb-72771591302-zfOyLVQB4KPdQCWOLfOpIGR6'
+# token = 'xoxb-72771591302-zfOyLVQB4KPdQCWOLfOpIGR6' # over-cart channel
+token = 'xoxb-78078516807-aOOcQRIXKQOFiW56TBZqAWXa' # gaemigo : bot-test channel
+channel_name = 'bot-test'
+
 slack = Slacker(token)
 
 attachments_dict = dict()
@@ -13,5 +16,5 @@ attachments_dict['text_link'] = "https://github.com/SSUHan"
 attachments_dict['mrkdwn_in'] = ['text', 'pretext']
 attachments = [attachments_dict, attachments_dict]
 
-slack.chat.post_message('server-dev',text=None, attachments=attachments, as_user=True)
+slack.chat.post_message(channel_name,text=None, attachments=attachments, as_user=True)
 # slack.chat.post_message('server-dev', 'message', as_user=True)
